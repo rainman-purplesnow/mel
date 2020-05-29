@@ -50,8 +50,8 @@ public class PatternTest {
 
     @Test
     public void test7(){
-        MelExpression expression = new MelExpression("0/2,1m/3");
-        Assert.assertEquals(MelDelay.builder().delay(0).unit(ChronoUnit.SECONDS).build(),expression.calcDelay(2));
+        MelExpression expression = new MelExpression("1ms/2,1m/3");
+        Assert.assertEquals(MelDelay.builder().delay(1).unit(ChronoUnit.MILLIS).build(),expression.calcDelay(2));
         Assert.assertEquals(MelDelay.builder().delay(1).unit(ChronoUnit.MINUTES).build(),expression.calcDelay(5));
     }
 

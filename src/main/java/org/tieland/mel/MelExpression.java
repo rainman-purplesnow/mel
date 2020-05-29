@@ -90,16 +90,16 @@ public class MelExpression {
     private class ExpressionParser {
 
         /** 匹配 0 | 100ms | 100s | 100m | 100h | 100d  */
-        private final Pattern SIMPLE_LIMITED = Pattern.compile("(^[1-9]\\d*[ms|s|m|h|d]|0)$");
+        private final Pattern SIMPLE_LIMITED = Pattern.compile("(^[1-9]\\d*(ms|s|m|h|d)|0)$");
 
         /** 匹配 0+ | 100ms+ | 100s+ | 100m+ | 100h+ | 100d+ */
-        private final Pattern SIMPLE_UNLIMITED = Pattern.compile("(^[1-9]\\d*[ms|s|m|h|d]|0)\\+$");
+        private final Pattern SIMPLE_UNLIMITED = Pattern.compile("(^[1-9]\\d*(ms|s|m|h|d)|0)\\+$");
 
         /** 匹配 0/10 | 100ms/10 | 100s/10 | 100m/10 | 100h/10 | 100d/10 */
-        private final Pattern MULTIPLE_LIMITED = Pattern.compile("(^[1-9]\\d*[ms|s|m|h|d]|0)/[1-9]\\d*$");
+        private final Pattern MULTIPLE_LIMITED = Pattern.compile("(^[1-9]\\d*(ms|s|m|h|d)|0)/[1-9]\\d*$");
 
         /** 匹配 0/10+ | 100ms/10+ | 100s/10+ | 100m/10+ | 100h/10+ | 100d/10+ */
-        private final Pattern MULTIPLE_UNLIMITED = Pattern.compile("(^[1-9]\\d*[ms|s|m|h|d]|0)/[1-9]\\d*\\+$");
+        private final Pattern MULTIPLE_UNLIMITED = Pattern.compile("(^[1-9]\\d*(ms|s|m|h|d)|0)/[1-9]\\d*\\+$");
 
         /** 匹配格式 */
         private final Pattern COMMON_PATTERN = Pattern.compile("^[0-9]\\S*[0-9|+|ms|s|m|h|d]$");
