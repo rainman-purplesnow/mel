@@ -13,7 +13,7 @@
     <commons-lang3.version>3.9</commons-lang3.version>
     <commons-collections.version>3.2.2</commons-collections.version>
     <lombok.version>1.18.12</lombok.version>
-    <junit.version>4.12</junit.version>
+    <junit.version>4.13.1</junit.version>
   </properties>
 
   <dependencies>
